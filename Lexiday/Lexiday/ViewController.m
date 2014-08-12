@@ -18,7 +18,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    //self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"backgroundLanding.jpg"]];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"paper-background-10.jpg"]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -27,6 +27,22 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)loginClicked:(id)sender {
+- (void)loginClicked:(id)sender{
+    NSString*msg = _txtemail;
+    
+
+     [self alertStatus:msg :@"LOGIN"];
+    
 }
+
+- (void) alertStatus:(NSString *)msg :(NSString *)title
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:msg delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alertView show];
+}
+
+
+
+
+
 @end

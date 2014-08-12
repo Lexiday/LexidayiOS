@@ -9,8 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITextField *txtusername;
-@property (weak, nonatomic) IBOutlet UITextField *txtpswd;
+@property (strong, nonatomic) IBOutletCollection(UITextField) NSString *txtemail;
+@property (strong, nonatomic) IBOutletCollection(UITextField) NSArray *txtpswd;
 - (IBAction)loginClicked:(id)sender;
-
 @end
